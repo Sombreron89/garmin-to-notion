@@ -30,7 +30,7 @@ ACTIVITY_ICONS = {
     # Add more mappings as needed
 }
 
-def get_all_activities(garmin, total_limit=5000, page_size=100):
+def get_all_activities(garmin, total_limit=1000, page_size=100):
     activities = []
     for start in range(0, total_limit, page_size):
         batch = garmin.get_activities(start, page_size)
